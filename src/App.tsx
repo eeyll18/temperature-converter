@@ -1,12 +1,11 @@
-
+import TemperatureConverter from "./components/TemperatureConverter";
 
 function App() {
-
   return (
-    <>
-      <h1 className="text-red-500">TC</h1>
-    </>
-  )
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <TemperatureConverter />
+    </div>
+  );
 }
 
-export default App
+export default App;
