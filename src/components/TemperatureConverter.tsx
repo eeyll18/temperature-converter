@@ -16,7 +16,7 @@ const TemperatureConverter: React.FC = () => {
 
     const numCelcius = parseFloat(value);
     if (!isNaN(numCelcius)) {
-      const fahrenheitValue = (numCelcius * 9 / 5) + 32;
+      const fahrenheitValue = (numCelcius * 9) / 5 + 32;
       setFahrenheit(fahrenheitValue.toFixed(2));
     }
   };
@@ -32,7 +32,7 @@ const TemperatureConverter: React.FC = () => {
 
     const numFahrenheit = parseFloat(value);
     if (!isNaN(numFahrenheit)) {
-      const celsiusValue = (numFahrenheit - 32) * 5 / 9;
+      const celsiusValue = ((numFahrenheit - 32) * 5) / 9;
       setCelcius(celsiusValue.toFixed(2));
     }
   };
@@ -57,7 +57,7 @@ const TemperatureConverter: React.FC = () => {
             className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={celcius}
             onChange={handleCelciusChange}
-            placeholder="Örn: 25"
+            placeholder="25"
           />
         </div>
 
@@ -74,7 +74,7 @@ const TemperatureConverter: React.FC = () => {
             className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={fahrenheit}
             onChange={handleFahrenheitChange}
-            placeholder="Örn: 77"
+            placeholder="77"
           />
         </div>
       </div>
