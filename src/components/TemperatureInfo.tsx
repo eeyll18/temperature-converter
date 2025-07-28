@@ -16,41 +16,41 @@ const TemperatureInfo: React.FC<TemperatureInfoProps> = ({ celcius }) => {
   const getTemperatureState = (temp: number): TemperatureState => {
     if (temp <= 0) {
       return {
-        message: "Su donma noktasında! Dışarısı çok soğuk.",
+        message: "Water is freezing! It's very cold outside.",
         bgColor: "bg-blue-200",
         emoji: "🥶",
       };
     }
     if (temp > 0 && temp < 15) {
       return {
-        message: "Hava serin. Bir ceket giymek iyi olabilir.",
+        message: "It's chilly. A jacket might be a good idea.",
         bgColor: "bg-cyan-200",
         emoji: "🧥",
       };
     }
     if (temp >= 15 && temp < 25) {
       return {
-        message: "Harika bir hava! Günün tadını çıkarın.",
+        message: "Perfect weather! Enjoy your day.",
         bgColor: "bg-green-200",
         emoji: "😊",
       };
     }
     if (temp >= 25 && temp < 35) {
       return {
-        message: "Hava sıcak. Tişört ve şort zamanı!",
+        message: "It's warm. Time for a t-shirt and shorts!",
         bgColor: "bg-yellow-200",
         emoji: "☀️",
       };
     }
     if (temp >= 35 && temp < 100) {
       return {
-        message: "Çok sıcak! Bol su içmeyi ve gölgede kalmayı unutmayın.",
+        message: "Very hot! Remember to drink plenty of water and stay in the shade.",
         bgColor: "bg-orange-200",
         emoji: "🥵",
       };
     }
     return {
-      message: "Su kaynama noktasında! Dikkatli olun.",
+      message: "Water is boiling! Be careful.",
       bgColor: "bg-red-300",
       emoji: "🔥",
     };
